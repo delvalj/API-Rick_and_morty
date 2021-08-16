@@ -39,10 +39,10 @@ export default {
   cursor: pointer;
   transition: transform 200ms ease-in-out;
   height: 100%;
-}
 
-.character:hover {
-  transform: scale(1.05);
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 
 h3:hover {
@@ -66,7 +66,7 @@ h3 {
     align-items: center;
     margin-bottom: 0.5rem; }
 
-    .status.span {
+    &span {
       color: var(--text-gray);
 
       &:first-child {
@@ -92,8 +92,6 @@ h3 {
     .origen {
       margin-bottom: 0.5rem;
     }
-
-
 
 </style>
 

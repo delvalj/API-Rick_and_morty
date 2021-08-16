@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="container">
   <h1>Rick and Morty</h1>
   <ListCharacters></ListCharacters>
 </div>

@@ -42,4 +42,5 @@ export default {
   gap: 3rem;
   margin: 3rem 0;
 }
+
 </style>
