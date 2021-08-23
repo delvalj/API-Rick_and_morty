@@ -29,7 +29,6 @@ export default {
 </script>
 
 <style Lang="scss">
-/* ARREGLAR LOS STYLES ACA */
 
 .character {
   background-color: var(--background-card);
@@ -42,56 +41,58 @@ export default {
 
   &:hover {
     transform: scale(1.05);
+
+    h3 {
+      color: var(--text-orange);
+    }
   }
-}
 
-h3:hover {
-  color: var(--text-orange);
-}
 
-span {
-  color: var(--text-gray);
-}
+  span {
+    color: var(--text-gray);
+  }
 
-h3 {
-  margin-bottom: 0.5rem;
-}
+  h3 {
+    margin-bottom: 0.5rem;
+  }
 
-.character__info {
-  padding: 1.5rem;
-}
+  &__info {
+    padding: 1.5rem;
 
-  .status {
-    display: flex;
-    align-items: center;
-    margin-bottom: 0.5rem; }
+    .status {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.5rem;
 
-    &span {
-      color: var(--text-gray);
+      span {
+        color: var(--text-gray);
 
-      &:first-child {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        margin-right: 0.5rem;
+        &:first-child {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          margin-right: 0.5rem;
+        }
       }
-    }
 
-    .alive {
-      background-color: green;
-    }
+      .alive {
+        background-color: green;
+      }
 
-    .dead {
-      background-color: red;
-    }
+      .dead {
+        background-color: red;
+      }
 
-    .default {
-      background-color: white;
+      .default {
+        background-color: white;
+      }
     }
 
     .origen {
       margin-bottom: 0.5rem;
     }
+  }
+}
 
 </style>
 
