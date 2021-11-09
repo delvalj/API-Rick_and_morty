@@ -1,10 +1,10 @@
 <template>
-    <h2> LOCATIONS HERE! </h2>
+  <h3> MAIN MENU </h3>
 </template>
 
 <script>
 export default {
-name: "locations"
+name: "MainMenu"
 }
 </script>
 

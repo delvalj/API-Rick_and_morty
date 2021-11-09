@@ -2,14 +2,20 @@
   <div class="container">
     <h1>Rick and Morty</h1>
 
+    <router-link to="/">
+      <button class="btn_menu">MAIN MENU</button>
+    </router-link>
 
-        <button class="btn_menu">CHARACTERS</button>
-        <button class="btn_menu">LOCATIONS</button>
-        <button class="btn_menu">EPISODES</button>
+    <router-link to="ListCharacters">
+      <button class="btn_menu">CHARACTERS</button>
+    </router-link>
 
-        <ListCharacters></ListCharacters>
+    <router-link to="locations">
+      <button class="btn_menu">LOCATIONS</button>
+    </router-link>
 
-      <router-view></router-view>
+    <router-view></router-view>
+
 
   </div>
 </template>
