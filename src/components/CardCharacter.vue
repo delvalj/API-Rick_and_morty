@@ -39,6 +39,9 @@ export default {
   transition: transform 200ms ease-in-out;
   height: 100%;
 
+  padding: 10px;
+
+
   &:hover {
     transform: scale(1.05);
 

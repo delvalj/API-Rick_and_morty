@@ -16,7 +16,7 @@ export default createStore({
     actions: {
         async getCharacters({commit}) {
             try {
-                const response = await fetch('https://rickandmortyapi.com/api/character')
+                const response = await fetch('https://rickandmortyapi.com/api/character?page=13')
                 const data =  await response.json()
                 console.log(data)
                 commit('setCharacters', data.results)
@@ -24,8 +24,13 @@ export default createStore({
             }catch(error) {
                 console.error(error)
             }
-        }
+        },
+
+
+
     },
+
+
     getters: {},
 });
 
