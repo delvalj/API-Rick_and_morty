@@ -2,21 +2,25 @@
   <div class="container">
     <h1>Rick and Morty</h1>
 
-    <button class="btn_menu">CHARACTERS</button>
-    <button class="btn_menu">LOCATIONS</button>
-    <button class="btn_menu">EPISODES</button>
 
-    <ListCharacters></ListCharacters>
+        <button class="btn_menu">CHARACTERS</button>
+        <button class="btn_menu">LOCATIONS</button>
+        <button class="btn_menu">EPISODES</button>
+
+        <ListCharacters></ListCharacters>
+
+      <router-view></router-view>
+
   </div>
 </template>
 
 <script>
-import ListCharacters from "@/components/ListCharacters";
+// import ListCharacters from "@/components/ListCharacters";
 
 export default {
   name: 'App',
   components: {
-    ListCharacters
+    // ListCharacters
   }
 }
 </script>
