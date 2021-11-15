@@ -19,6 +19,10 @@
       <button class="btn_menu">FORMULARIO</button>
     </router-link>
 
+    <router-link to="Auth">
+      <button class="btn_menu">AUTH</button>
+    </router-link>
+
     <router-view></router-view>
 
   </div>

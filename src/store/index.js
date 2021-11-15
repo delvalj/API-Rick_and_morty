@@ -45,7 +45,6 @@ export default createStore({
             state.token = payload.token;
             state.userId = payload.userId;
             state.tokenExpiration = payload.tokenExpiration;
-
         }
     },
     actions: {
@@ -108,7 +107,8 @@ export default createStore({
             context.commit('setUser', {
                 token: responseData.idToken,
                 userId: responseData.localId,
-                tokenExpiration: responseData.expiresIn
+                tokenExpiration: responseData.expiresIn,
+                registered: responseData.registered
             })
 
         },
@@ -131,11 +131,12 @@ export default createStore({
                 throw error;
             }
             console.log(responseData);
+
             context.commit('setUser', {
                 token: responseData.idToken,
                 userId: responseData.localId,
                 tokenExpiration: responseData.expiresIn,
-                registered: responseData.registered
+
 
             })
         },
