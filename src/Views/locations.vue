@@ -1,23 +1,6 @@
 <template>
   <h2> LOCATIONS HERE! </h2>
 
-  <!--    <table v-for="location in locations" :key="location.id">-->
-  <!--      <tr>-->
-  <!--        <thead>-->
-  <!--        <th>ID</th>-->
-  <!--        <th>NAME</th>-->
-  <!--        <th>TYPE</th>-->
-  <!--        </thead>-->
-  <!--      </tr>-->
-  <!--      <tr>-->
-  <!--        <tbody>-->
-  <!--        <td>{{ location.id }}</td>-->
-  <!--        <td>{{ location.name }}</td>-->
-  <!--        <td>{{ location.type }}</td>-->
-  <!--        </tbody>-->
-  <!--      </tr>-->
-  <!--    </table>-->
-
   <table v-for="location in locations" :key="location.id">
     <tr>
       <th>Id</th>

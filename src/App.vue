@@ -1,9 +1,10 @@
 <template>
+
   <div class="container">
-    <h1>Rick and Morty</h1>
+    <h1>JASON</h1>
 
     <router-link to="/">
-      <button class="btn_menu">MAIN MENU</button>
+      <button class="btn_menu"> USERS</button>
     </router-link>
 
     <router-link to="ListCharacters">
@@ -14,10 +15,14 @@
       <button class="btn_menu">LOCATIONS</button>
     </router-link>
 
+    <router-link to="Formulario">
+      <button class="btn_menu">FORMULARIO</button>
+    </router-link>
+
     <router-view></router-view>
 
-
   </div>
+
 </template>
 
 <script>
@@ -44,7 +49,6 @@ export default {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-
 }
 
 body {
@@ -56,7 +60,6 @@ body {
 h1 {
   margin-bottom: 3rem;
   text-align: center;
-
 }
 
 .container {
@@ -75,7 +78,6 @@ img {
   border-radius: 20px;
   border: 1px solid black;
   display: inline;
-
 }
 
 .btn_menu:hover {

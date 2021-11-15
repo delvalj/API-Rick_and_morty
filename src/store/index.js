@@ -1,11 +1,26 @@
 import {createStore} from 'vuex'
 
+var param = 2;
+
 export default createStore({
+
     state: {
+        //Sign Up
+        userId: null,
+        token: null,
+        tokenExpiration: null,
+
+        //login
+        registered: null,
+
+
+        // para los personajes de rick and morty
         characters: [],
         charactersFilter: [],
         locations: [],
-        locationsFilter: []
+        locationsFilter: [],
+        users: [],
+        usersFilter: [],
     },
     mutations: {
         setCharacters(state, payload) {
@@ -20,12 +35,23 @@ export default createStore({
         setLocationsFilter(state, payload) {
             state.locationsFilter = payload
         },
+        setUsers(state, payload) {
+            state.users = payload
+        },
+        setUsersFilter(state, payload) {
+            state.usersFilter = payload
+        },
+        setUser(state, payload) {
+            state.token = payload.token;
+            state.userId = payload.userId;
+            state.tokenExpiration = payload.tokenExpiration;
 
+        }
     },
     actions: {
         async getCharacters({commit}) {
             try {
-                const response = await fetch('https://rickandmortyapi.com/api/character?page=13')
+                const response = await fetch('https://rickandmortyapi.com/api/character?page=17')
                 const data = await response.json()
                 console.log(data)
                 commit('setCharacters', data.results)
@@ -46,6 +72,73 @@ export default createStore({
             }
         },
 
+        async getUsers({commit}) {
+            try {
+                const response = await fetch('https://reqres.in/api/users?page=' + param)
+                const data = await response.json()
+                console.log(data)
+                commit('setUsers', data.data)
+                commit('setUsersFilter', data.data)
+
+            } catch (error) {
+                console.error(error)
+            }
+        },
+
+        async login(context, payload) {
+            const response = await fetch('https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyAuCh3LuY25Rf-ZXWy2thACETJtA9lIHDQ',
+                {
+                    method: 'POST',
+                    body: JSON.stringify({
+                        email: payload.email,
+                        password: payload.password,
+                        returnSecureToken: true
+                    })
+                });
+
+            const responseData = await response.json();
+
+            if (!response.ok) {
+                console.log(responseData);
+                const error = new Error(responseData.message || 'Failed to Auth');
+                throw error;
+            }
+
+            console.log(responseData);
+            context.commit('setUser', {
+                token: responseData.idToken,
+                userId: responseData.localId,
+                tokenExpiration: responseData.expiresIn
+            })
+
+        },
+        async signup(context, payload) {
+            const response = await fetch('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyAuCh3LuY25Rf-ZXWy2thACETJtA9lIHDQ',
+                {
+                    method: 'POST',
+                    body: JSON.stringify({
+                        email: payload.email,
+                        password: payload.password,
+                        returnSecureToken: true
+                    })
+                });
+
+            const responseData = await response.json();
+
+            if (!response.ok) {
+                console.log(responseData);
+                const error = new Error(responseData.message || 'Failed to Auth');
+                throw error;
+            }
+            console.log(responseData);
+            context.commit('setUser', {
+                token: responseData.idToken,
+                userId: responseData.localId,
+                tokenExpiration: responseData.expiresIn,
+                registered: responseData.registered
+
+            })
+        },
 
     },
 

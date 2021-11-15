@@ -6,7 +6,9 @@ import {createRouter, createWebHistory} from 'vue-router'
 
 import ListCharacters from "@/components/ListCharacters";
 import locations from "@/Views/locations";
-import MainMenu from "@/Views/MainMenu";
+import MainMenu from "@/Views/Users";
+import Formulario from "@/Views/Formulario";
+import UserAuth from "@/Auth/UserAuth";
 
 
 const router = createRouter({
@@ -23,6 +25,19 @@ const router = createRouter({
             path: '/locations',
             component: locations
         },
+        {
+            path: '/Formulario',
+            component: Formulario
+        },
+        {
+            path: '/Auth',
+            component: UserAuth
+        },
+
+        // {
+        //     path: '/:notFound(.*)',
+        //     component: NotFound
+        // }
     ]
 });
 
