@@ -82,13 +82,7 @@ export default {
 </script>
 
 <style scoped>
-form {
-  border-radius: 12px;
-  border: 1px solid #ccc;
-  padding: 1rem;
-  width: 50%;
-  margin: 1rem 1rem 1rem 13rem;
-}
+
 
 .formControl {
   margin: 0.5rem 0;
@@ -107,6 +101,7 @@ input, textarea {
   font: inherit;
   border: 1px solid #ccc;
   padding: 0.15rem;
+  margin: 2px;
 
 }
 

@@ -1,7 +1,5 @@
 import {createStore} from 'vuex'
 
-var param = 2;
-
 export default createStore({
 
     state: {
@@ -10,11 +8,10 @@ export default createStore({
         token: null,
         tokenExpiration: null,
 
-        //login
+        //Login
         registered: null,
 
-
-        // para los personajes de rick and morty
+        // RM characters
         characters: [],
         charactersFilter: [],
         locations: [],
@@ -35,12 +32,17 @@ export default createStore({
         setLocationsFilter(state, payload) {
             state.locationsFilter = payload
         },
-        setUsers(state, payload) {
-            state.users = payload
-        },
-        setUsersFilter(state, payload) {
-            state.usersFilter = payload
-        },
+
+        //USERS
+
+        // setUsers(state, payload) {
+        //     state.users = payload
+        // },
+
+        // setUsersFilter(state, payload) {
+        //     state.usersFilter = payload
+        // },
+
         setUser(state, payload) {
             state.token = payload.token;
             state.userId = payload.userId;
@@ -71,18 +73,18 @@ export default createStore({
             }
         },
 
-        async getUsers({commit}) {
-            try {
-                const response = await fetch('https://reqres.in/api/users?page=' + param)
-                const data = await response.json()
-                console.log(data)
-                commit('setUsers', data.data)
-                commit('setUsersFilter', data.data)
-
-            } catch (error) {
-                console.error(error)
-            }
-        },
+        // async getUsers({commit}) {
+        //     try {
+        //         const response = await fetch('https://reqres.in/api/users?page=' + param)
+        //         const data = await response.json()
+        //         console.log(data)
+        //         commit('setUsers', data.data)
+        //         commit('setUsersFilter', data.data)
+        //
+        //     } catch (error) {
+        //         console.error(error)
+        //     }
+        // },
 
         async login(context, payload) {
             const response = await fetch('https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyAuCh3LuY25Rf-ZXWy2thACETJtA9lIHDQ',
@@ -137,12 +139,10 @@ export default createStore({
                 userId: responseData.localId,
                 tokenExpiration: responseData.expiresIn,
 
-
             })
         },
 
     },
-
 
     getters: {},
 });

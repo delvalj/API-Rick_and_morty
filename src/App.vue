@@ -3,20 +3,12 @@
   <div class="container">
     <h1>JASON</h1>
 
-    <router-link to="/">
-      <button class="btn_menu"> USERS</button>
-    </router-link>
-
     <router-link to="ListCharacters">
       <button class="btn_menu">CHARACTERS</button>
     </router-link>
 
     <router-link to="locations">
       <button class="btn_menu">LOCATIONS</button>
-    </router-link>
-
-    <router-link to="Formulario">
-      <button class="btn_menu">FORMULARIO</button>
     </router-link>
 
     <router-link to="Auth">
@@ -36,6 +28,7 @@ export default {
   name: 'App',
   components: {
     // ListCharacters
+
   }
 }
 </script>

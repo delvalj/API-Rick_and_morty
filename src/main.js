@@ -6,17 +6,18 @@ import {createRouter, createWebHistory} from 'vue-router'
 
 import ListCharacters from "@/components/ListCharacters";
 import locations from "@/Views/locations";
-import MainMenu from "@/Views/Users";
-import Formulario from "@/Views/Formulario";
 import UserAuth from "@/Auth/UserAuth";
+
+// import MainMenu from "@/Views/Users";
+// import Formulario from "@/Views/Formulario";
+// import Albums from "@/Views/Albums";
+// import NBA from "@/Views/NBA";
 
 
 const router = createRouter({
     history: createWebHistory(),
-    routes: [{
-        path: '/',
-        component: MainMenu
-        },
+    routes: [
+
         {
             path: '/ListCharacters',
             component: ListCharacters
@@ -26,14 +27,17 @@ const router = createRouter({
             component: locations
         },
         {
-            path: '/Formulario',
-            component: Formulario
-        },
-        {
             path: '/Auth',
             component: UserAuth
         },
-
+        // {
+        //     path: '/Formulario',
+        //     component: Formulario
+        // },
+        // {
+        // path: '/',
+        // component: MainMenu
+        // },
         // {
         //     path: '/:notFound(.*)',
         //     component: NotFound
