@@ -50,6 +50,20 @@ export default createStore({
         }
     },
     actions: {
+        filterByStatus({commit, state}, status) {
+            const results = state.characters.filter((character) => {
+                return character.status.includes(status)
+            })
+            commit('setCharactersFilter', results)
+        },
+
+        filterByName({commit, state}, name) {
+            const results = state.characters.filter((character) => {
+                return character.name.includes(name)
+            })
+            commit('setCharactersFilter', results)
+        },
+
         async getCharacters({commit}) {
             try {
                 const response = await fetch("https://rickandmortyapi.com/api/character/?page=12")
@@ -61,6 +75,7 @@ export default createStore({
                 console.error(error)
             }
         },
+
         async getLocations({commit}) {
             try {
                 const response = await fetch('https://rickandmortyapi.com/api/location')

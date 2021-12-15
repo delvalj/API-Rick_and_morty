@@ -1,19 +1,21 @@
 <template>
 
   <div class="container">
-    <h1>JASON</h1>
+    <h1>Rick And Morty</h1>
 
-    <router-link to="ListCharacters">
-      <button class="btn_menu">CHARACTERS</button>
-    </router-link>
+    <FilterByStatus></FilterByStatus>
 
-    <router-link to="locations">
-      <button class="btn_menu">LOCATIONS</button>
-    </router-link>
+<!--    <router-link to="ListCharacters">-->
+<!--      <button class="btn_menu">CHARACTERS</button>-->
+<!--    </router-link>-->
 
-    <router-link to="Auth">
-      <button class="btn_menu">AUTH</button>
-    </router-link>
+<!--    <router-link to="locations">-->
+<!--      <button class="btn_menu">LOCATIONS</button>-->
+<!--    </router-link>-->
+
+<!--    <router-link to="Auth">-->
+<!--      <button class="btn_menu">AUTH</button>-->
+<!--    </router-link>-->
 
     <router-view></router-view>
 
@@ -23,11 +25,13 @@
 
 <script>
 // import ListCharacters from "@/components/ListCharacters";
+import FilterByStatus from "@/components/FilterByStatus";
 
 export default {
   name: 'App',
   components: {
     // ListCharacters
+    FilterByStatus
 
   }
 }
