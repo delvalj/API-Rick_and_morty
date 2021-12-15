@@ -7,11 +7,6 @@
       </div>
     </div>
 
-    <div class="btn_pagination">
-      <button class="btn"> PREVIOUS</button>
-      <button class="btn"> NEXT</button>
-    </div>
-
   </section>
 </template>
 
@@ -53,24 +48,5 @@ export default {
   gap: 3rem;
   margin: 3rem 0;
 }
-
-.characters__item {
-  padding: 2px;
-}
-
-.btn {
-  padding: 15px;
-  margin: 2px;
-  border-radius: 20px;
-  border: 1px solid black;
-  display: inline;
-  position: relative;
-  left:792px;
-
-  &:hover {
-    background-color: var(--text-orange);
-  }
-}
-
 
 </style>

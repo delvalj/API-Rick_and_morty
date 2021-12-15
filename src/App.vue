@@ -33,7 +33,7 @@ export default {
 }
 </script>
 
-<style Lang="scss">
+<style lang="scss">
 :root {
   --background-body: #24282F;
   --background-card: #3C3E44;

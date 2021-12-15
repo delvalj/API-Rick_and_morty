@@ -2,23 +2,30 @@
   <div class="character">
     <img :src="character.image" alt="character.name">
     <div class="character__info">
+
       <h3>{{ character.name }}</h3>
+
       <div class="status">
+
         <span :class="
-          character.status === 'Alive' ? 'alive' :
-          character.status === 'Dead' ? 'dead' :
+          character.status == 'Alive' ? 'alive' :
+          character.status == 'Dead' ? 'dead' :
         'default'
         "
         ></span>
         <span> {{ character.status }} - {{ character.species }} - {{ character.type }}  </span>
       </div>
+
       <div class="origin">
         <span> Origin: {{ character.origin.name }}</span>
       </div>
+
       <div class="location">
         Location: {{ character.location.name }}
       </div>
+
     </div>
+
   </div>
 </template>
 
@@ -28,7 +35,7 @@ export default {
 }
 </script>
 
-<style Lang="scss">
+<style lang="scss">
 
 .character {
   background-color: var(--background-card);
@@ -38,9 +45,7 @@ export default {
   cursor: pointer;
   transition: transform 200ms ease-in-out;
   height: 100%;
-
   padding: 10px;
-
 
   &:hover {
     transform: scale(1.05);
@@ -49,7 +54,6 @@ export default {
       color: var(--text-orange);
     }
   }
-
 
   span {
     color: var(--text-gray);
