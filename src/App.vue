@@ -4,6 +4,7 @@
     <h1>Rick And Morty</h1>
 
     <FilterByStatus></FilterByStatus>
+    <FilterByName></FilterByName>
 
 <!--    <router-link to="ListCharacters">-->
 <!--      <button class="btn_menu">CHARACTERS</button>-->
@@ -26,13 +27,14 @@
 <script>
 // import ListCharacters from "@/components/ListCharacters";
 import FilterByStatus from "@/components/FilterByStatus";
+import FilterByName from "@/components/FilterByName";
 
 export default {
   name: 'App',
   components: {
     // ListCharacters
-    FilterByStatus
-
+    FilterByStatus,
+    FilterByName
   }
 }
 </script>
