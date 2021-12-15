@@ -41,6 +41,8 @@ In order to deploy the project i used <https://app.netlify.com/>
 
 You can connect it to your Github and select your repository and it ll work perfectly!
 
+Go check it out! <https://rm-characters.netlify.app/>
+
 
 ## Built With
 
