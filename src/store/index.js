@@ -3,21 +3,8 @@ import {createStore} from 'vuex'
 export default createStore({
 
     state: {
-        //Sign Up
-        userId: null,
-        token: null,
-        tokenExpiration: null,
-
-        //Login
-        registered: null,
-
-        // RM characters
         characters: [],
         charactersFilter: [],
-        locations: [],
-        locationsFilter: [],
-        users: [],
-        usersFilter: [],
     },
     mutations: {
         setCharacters(state, payload) {
@@ -32,16 +19,6 @@ export default createStore({
         setLocationsFilter(state, payload) {
             state.locationsFilter = payload
         },
-
-        //USERS
-
-        // setUsers(state, payload) {
-        //     state.users = payload
-        // },
-
-        // setUsersFilter(state, payload) {
-        //     state.usersFilter = payload
-        // },
 
         setUser(state, payload) {
             state.token = payload.token;
@@ -202,18 +179,6 @@ export default createStore({
             }
         },
 
-        // async getUsers({commit}) {
-        //     try {
-        //         const response = await fetch('https://reqres.in/api/users?page=' + param)
-        //         const data = await response.json()
-        //         console.log(data)
-        //         commit('setUsers', data.data)
-        //         commit('setUsersFilter', data.data)
-        //
-        //     } catch (error) {
-        //         console.error(error)
-        //     }
-        // },
 
         async login(context, payload) {
             const response = await fetch('https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyAuCh3LuY25Rf-ZXWy2thACETJtA9lIHDQ',

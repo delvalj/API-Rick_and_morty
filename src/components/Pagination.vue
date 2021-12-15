@@ -12,7 +12,6 @@
     <button class="btn" @click="page9"> 9</button>
     <button class="btn" @click="page10"> 10</button>
 
-
   </div>
 </template>
 
