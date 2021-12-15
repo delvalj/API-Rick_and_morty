@@ -71,7 +71,7 @@ export default createStore({
 
         async getCharacters({commit}) {
             try {
-                const response = await fetch("https://rickandmortyapi.com/api/character/?page=12")
+                const response = await fetch("https://rickandmortyapi.com/api/character/?page=32")
                 const data = await response.json()
                 console.log(data)
                 commit('setCharacters', data.results)
@@ -80,6 +80,115 @@ export default createStore({
                 console.error(error)
             }
         },
+
+        async getCharactersPage2({commit}) {
+            try {
+                const response = await fetch("https://rickandmortyapi.com/api/character/?page=19")
+                const data = await response.json()
+                console.log(data)
+                commit('setCharacters', data.results)
+                commit('setCharactersFilter', data.results)
+            } catch (error) {
+                console.error(error)
+            }
+        },
+
+        async getCharactersPage3({commit}) {
+            try {
+                const response = await fetch("https://rickandmortyapi.com/api/character/?page=13")
+                const data = await response.json()
+                console.log(data)
+                commit('setCharacters', data.results)
+                commit('setCharactersFilter', data.results)
+            } catch (error) {
+                console.error(error)
+            }
+        },
+
+        async getCharactersPage4({commit}) {
+            try {
+                const response = await fetch("https://rickandmortyapi.com/api/character/?page=23")
+                const data = await response.json()
+                console.log(data)
+                commit('setCharacters', data.results)
+                commit('setCharactersFilter', data.results)
+            } catch (error) {
+                console.error(error)
+            }
+        },
+
+        async getCharactersPage5({commit}) {
+            try {
+                const response = await fetch("https://rickandmortyapi.com/api/character/?page=33")
+                const data = await response.json()
+                console.log(data)
+                commit('setCharacters', data.results)
+                commit('setCharactersFilter', data.results)
+            } catch (error) {
+                console.error(error)
+            }
+        },
+
+        async getCharactersPage6({commit}) {
+            try {
+                const response = await fetch("https://rickandmortyapi.com/api/character/?page=3")
+                const data = await response.json()
+                console.log(data)
+                commit('setCharacters', data.results)
+                commit('setCharactersFilter', data.results)
+            } catch (error) {
+                console.error(error)
+            }
+        },
+
+        async getCharactersPage7({commit}) {
+            try {
+                const response = await fetch("https://rickandmortyapi.com/api/character/?page=27")
+                const data = await response.json()
+                console.log(data)
+                commit('setCharacters', data.results)
+                commit('setCharactersFilter', data.results)
+            } catch (error) {
+                console.error(error)
+            }
+        },
+
+        async getCharactersPage8({commit}) {
+            try {
+                const response = await fetch("https://rickandmortyapi.com/api/character/?page=39")
+                const data = await response.json()
+                console.log(data)
+                commit('setCharacters', data.results)
+                commit('setCharactersFilter', data.results)
+            } catch (error) {
+                console.error(error)
+            }
+        },
+
+        async getCharactersPage9({commit}) {
+            try {
+                const response = await fetch("https://rickandmortyapi.com/api/character/?page=41")
+                const data = await response.json()
+                console.log(data)
+                commit('setCharacters', data.results)
+                commit('setCharactersFilter', data.results)
+            } catch (error) {
+                console.error(error)
+            }
+        },
+
+        async getCharactersPage10({commit}) {
+            try {
+                const response = await fetch("https://rickandmortyapi.com/api/character/?page=42")
+                const data = await response.json()
+                console.log(data)
+                commit('setCharacters', data.results)
+                commit('setCharactersFilter', data.results)
+            } catch (error) {
+                console.error(error)
+            }
+        },
+
 
         async getLocations({commit}) {
             try {

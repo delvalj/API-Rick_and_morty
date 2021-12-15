@@ -19,6 +19,7 @@
 <!--    </router-link>-->
 
     <router-view></router-view>
+    <Pagination></Pagination>
 
   </div>
 
@@ -28,13 +29,15 @@
 // import ListCharacters from "@/components/ListCharacters";
 import FilterByStatus from "@/components/FilterByStatus";
 import FilterByName from "@/components/FilterByName";
+import Pagination from "@/components/Pagination";
 
 export default {
   name: 'App',
   components: {
     // ListCharacters
     FilterByStatus,
-    FilterByName
+    FilterByName,
+    Pagination
   }
 }
 </script>
