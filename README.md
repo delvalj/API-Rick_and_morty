@@ -10,7 +10,7 @@ Here there are some of the core concepts that you ll learn if you want to work w
 
 * Vuex
 * Vue Router
-* HTTP Requests using the Fetch and also AXIOS.
+* HTTP Requests using Fetch.
 * How to Deploy a project.
 
 ## Getting Started
@@ -37,21 +37,10 @@ In the terminal:
 
 ## Deployment
 
-In order to deploy the project i used the Firesbase Hosting option.
-In your local console in Firebase you have the option HOSTING. Go for it.
+In order to deploy the project i used <https://app.netlify.com/>
 
-After that you ll have to install some things to make it work...
+You can connect it to your Github and select your repository and it ll work perfectly!
 
-- npm run build
-
-After you are done with these you ll find a new directory called DIST. This is the project with all the optimization needed for firebase.
-
-Then, following Firebase instructions
-
-- npm install -g firebase-tools
-- firebase login
-- firebase init
-- firebase deploy
 
 ## Built With
 
@@ -60,7 +49,6 @@ Then, following Firebase instructions
 
 ## Dependencies
 
-"axios": "^0.24.0",
 "core-js": "^3.6.5",
 "vue": "^3.0.0",
 "vue-router": "^4.0.12",
